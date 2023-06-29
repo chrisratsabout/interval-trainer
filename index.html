@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="modal">
+        <h2 class="modal-title">Interval Trainer</h2>
+        <button class="close-btn">X</button>
+        <p>Press play to hear both notes and check your answer afterward.</p><br>
+        <p class="legend-title">Interval legend:</p>
+        <ul>
+            <li>P1 = perfect unison</li>
+            <li>m2 = minor 2nd</li>
+            <li>M2 = major 2nd</li>
+            <li>m3 = minor 3rd</li>
+            <li>M3 = major 3rd</li>
+            <li>P4 = perfect 4th</li>
+            <li>Tritone = augmented 4th/diminished 5th</li>
+            <li>P5 = perfect 5th</li>
+            <li>m6 = minor 6th</li>
+            <li>M6 = major 6th</li>
+            <li>m7 = minor 7th</li>
+            <li>M7 = major 7th</li>
+            <li>P8 = perfect octave</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Interval Trainer</h2>
+        <div class="note-animation-container">
+            <div class="left-note"></div>
+            <div class="right-note"></div>
+        </div>
+        <div class="bottom-container">
+            <button class="play-btn">Play</button>
+            <button class="answer-btn">Show Answer</button>
+            <div class="answer-box">Interval</div>
+            <p class="legend">Legend</p>
+        </div>
+    </div>
+
+
+    <audio id="c2" src="samples/c2.mp3"></audio>
+    <audio id="c-sharp-2" src="samples/c-sharp-2.mp3"></audio>
+    <audio id="d2" src="samples/d2.mp3"></audio>
+    <audio id="d-sharp-2" src="samples/d-sharp-2.mp3"></audio>
+    <audio id="e2" src="samples/e2.mp3"></audio>
+    <audio id="f2" src="samples/f2.mp3"></audio>
+    <audio id="f-sharp-2" src="samples/f-sharp-2.mp3"></audio>
+    <audio id="g2" src="samples/g2.mp3"></audio>
+    <audio id="g-sharp-2" src="samples/g-sharp-2.mp3"></audio>
+    <audio id="a2" src="samples/a2.mp3"></audio>
+    <audio id="a-sharp-2" src="samples/a-sharp-2.mp3"></audio>
+    <audio id="b2" src="samples/b2.mp3"></audio>
+    <audio id="c3" src="samples/c3.mp3"></audio>
+</body>
+</html>

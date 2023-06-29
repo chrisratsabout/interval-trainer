@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Sigmar&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+    min-width: 100vh;
+    background-image: radial-gradient(circle, rgb(254, 123, 244) 0%, rgb(205, 119, 255) 100%);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Mulish, sans-serif;
+    background-color: rgba(240, 248, 255, 0.913);
+    width: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.modal.active {
+    visibility: hidden;
+}
+
+.legend-title {
+    font-weight: 800;
+}
+
+.close-btn {
+    color: red;
+    position: relative;
+    top: -3rem;
+    right: -7.5rem;
+    border: none;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Mulish, sans-serif;
+}
+
+.note-animation-container {
+    display: flex;
+    gap: 10px;
+}
+
+.left-note,
+.right-note {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 10px;
+    transition: ease-in-out .3s;
+}
+
+.play-btn {
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(46, 228, 0);
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+}
+
+.play-btn:hover {
+    background-color: rgb(157, 255, 132);
+    cursor: pointer;
+}
+
+
+
+.answer-btn {
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(0, 209, 228);
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+.answer-btn:hover {
+    background-color: rgb(92, 241, 255);
+    cursor: pointer;
+}
+
+.answer-box {
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.legend {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.legend:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

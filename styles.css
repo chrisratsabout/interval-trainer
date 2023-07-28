@@ -67,7 +67,7 @@ body {
     margin: 10px 10px;
     outline: none;
     box-shadow: -10px -10px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 15px 0 rgba(70, 70, 70, 0.12);
-
+    color: rgb(48, 48, 48);
 }
 
 .close-btn {
@@ -232,5 +232,10 @@ body {
 
     .note-pill {
         width: 55vw;
+    }
+
+    .close-btn {
+        width: 40px;
+        height: 40px;
     }
 }

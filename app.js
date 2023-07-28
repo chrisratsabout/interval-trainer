@@ -1,22 +1,24 @@
 const playBtn = document.querySelector(".play-btn");
-const answerBtn = document.querySelector(".answer-btn");
-const answerText = document.querySelector(".answer-box");
+
+const correctThumbsUp = document.querySelector(".correct");
+const incorrectThumbsDown = document.querySelector(".incorrect");
+const scoreText = document.querySelector(".score-text");
 const leftNote = document.querySelector(".left-note");
 const rightNote = document.querySelector(".right-note");
-const closeBtn = document.querySelector(".close-btn");
-const modal = document.querySelector(".modal");
-const legend = document.querySelector(".legend");
 
+const optionBtns = document.querySelectorAll(".option-btn");
 
 const secondNoteOptions = ['c2', 'c-sharp-2', 'd2', 'd-sharp-2', 'e2', 'f2', 'f-sharp-2', 'g2', 'g-sharp-2', 'a2', 'a-sharp-2', 'b2', 'c3'];
 
 let firstNote = 'c2';
 let secondNote = null;
+let score = 0;
 
-answerBtn.disabled = true;
+optionBtns.disabled = true;
+
 
 playBtn.addEventListener("click", function () {
-    answerText.innerHTML = "Interval";
+    correctThumbsUp.classList.remove("active");
 
     let randomSecondNote = Math.floor(Math.random() * secondNoteOptions.length)
     secondNote = randomSecondNote;
@@ -25,9 +27,11 @@ playBtn.addEventListener("click", function () {
     const firstNoteAudio = document.getElementById('c2');
     firstNoteAudio.currentTime = 0;
     firstNoteAudio.play();
-    leftNote.style.background = "yellow";
+    leftNote.style.background = "rgb(210, 210, 210)";
+    leftNote.style["box-shadow"] = "inset -10px -10px 15px 0 rgba(255, 255, 255, 0.5), inset 10px 10px 15px 0 rgba(70, 70, 70, 0.12)"
     setTimeout(()=> {
-        leftNote.style.background = "black";  
+        leftNote.style.background = "#ececec";  
+        leftNote.style["box-shadow"] = "-10px -10px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 15px 0 rgba(70, 70, 70, 0.12)"
     }, 700)
     
 
@@ -36,69 +40,41 @@ playBtn.addEventListener("click", function () {
         const secondNoteAudio = document.getElementById(secondNoteOptions[randomSecondNote]);
         secondNoteAudio.currentTime = 0;
         secondNoteAudio.play();
-        rightNote.style.background = "yellow";
+        rightNote.style.background = "rgb(210, 210, 210)";
+        rightNote.style["box-shadow"] = "inset -10px -10px 15px 0 rgba(255, 255, 255, 0.5), inset 10px 10px 15px 0 rgba(70, 70, 70, 0.12)"
     }, 1700);
-    setTimeout(()=> {
-        rightNote.style.background = "black";  
-    }, 2400)
 
-    setTimeout(() => {
-        answerBtn.disabled = false;
-    }, 3000)
+    setTimeout(()=> {
+        rightNote.style.background = "#ececec";  
+        rightNote.style["box-shadow"] = "-10px -10px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 15px 0 rgba(70, 70, 70, 0.12)"
+    }, 2400);
+
+    setTimeout(()=> {
+        optionBtns.forEach(btn => {
+            btn.disabled = false;
+        })
+    }, 300);
+   
 
     playBtn.disabled = true;
+  
 })
 
-answerBtn.addEventListener("click", function () {
-    answerBtn.disabled = true;
-    playBtn.disabled = false;
-    switch (secondNote) {
-        case 0:
-            answerText.innerHTML = "P1";
-            break;
-        case 1:
-            answerText.innerHTML = "m2";
-            break;
-        case 2:
-            answerText.innerHTML = "M2";
-            break;
-        case 3:
-            answerText.innerHTML = "m3";
-            break;
-        case 4:
-            answerText.innerHTML = "M3";
-            break;
-        case 5:
-            answerText.innerHTML = "P4";
-            break;
-        case 6:
-            answerText.innerHTML = "Tritone";
-            break;
-        case 7:
-            answerText.innerHTML = "P5";
-            break;
-        case 8:
-            answerText.innerHTML = "m6";
-            break;
-        case 9:
-            answerText.innerHTML = "M6";
-            break;
-        case 10:
-            answerText.innerHTML = "m7";
-            break;
-        case 11:
-            answerText.innerHTML = "M7";
-            break;
-        case 12:
-            answerText.innerHTML = "P8";
-            break;
-    }
+optionBtns.forEach(btn => {
+    btn.addEventListener("click", function(e){
+        if(e.target.classList.contains(secondNote)){
+            score++;
+            playBtn.disabled = false;
+            correctThumbsUp.classList.add("active");
+            incorrectThumbsDown.classList.remove("active");
+            scoreText.textContent = score;
+            optionBtns.forEach(btn => {
+                btn.disabled = true;
+            })
+        } else {
+            incorrectThumbsDown.classList.add("active");
+        }
+    })
 })
 
-closeBtn.addEventListener("click", function(){
-    modal.classList.toggle("active")
-})
 
-legend.addEventListener("click", function(){
-    modal.classList.toggle("active")
-})

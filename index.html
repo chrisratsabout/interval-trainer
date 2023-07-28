@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interval Trainer</title>
+    <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
-    <div class="modal">
-        <h2 class="modal-title">Interval Trainer</h2>
-        <button class="close-btn">X</button>
-        <p>Press play to hear both notes and check your answer afterward.</p><br>
-        <p class="legend-title">Interval legend:</p>
-        <ul>
-            <li>P1 = perfect unison</li>
-            <li>m2 = minor 2nd</li>
-            <li>M2 = major 2nd</li>
-            <li>m3 = minor 3rd</li>
-            <li>M3 = major 3rd</li>
-            <li>P4 = perfect 4th</li>
-            <li>Tritone = augmented 4th/diminished 5th</li>
-            <li>P5 = perfect 5th</li>
-            <li>m6 = minor 6th</li>
-            <li>M6 = major 6th</li>
-            <li>m7 = minor 7th</li>
-            <li>M7 = major 7th</li>
-            <li>P8 = perfect octave</li>
-        </ul>
-    </div>
+
     <div class="container">
         <h2>Interval Trainer</h2>
         <div class="note-animation-container">
@@ -37,13 +20,37 @@
             <div class="right-note"></div>
         </div>
         <div class="bottom-container">
-            <button class="play-btn">Play</button>
-            <button class="answer-btn">Show Answer</button>
-            <div class="answer-box">Interval</div>
-            <p class="legend">Legend</p>
+            <button class="play-btn">Play <i class="fa-solid fa-play"></i></button>
+            <div class="answer-status"><span class="fa-stack"><i class="fa-regular fa-thumbs-up correct"></i><span class="fa-stack fa-stack-1x"><i class="fa-regular fa-thumbs-down incorrect"></i></span></span></div>
+            <button class="score-box">Score: <span class="score-text">0</span></button>
         </div>
     </div>
+    <div class="option-container">
+        <h2 class="option-title">Intervals:</h2>
+        <div class="option-btn-row">
+            <button class="option-btn p1-btn c2 c3 0 12">P1/P8</button>
+            <button class="option-btn minor2-btn c-sharp-2 1">m2</button>
+            <button class="option-btn major2-btn d2 2">M2</button>
+            <button class="option-btn minor3-btn d-sharp-2 3">m3</button>
+        </div>
+        <div class="option-btn-row">
+            <button class="option-btn major3-btn e2 4">M3</button>
+            <button class="option-btn perfect4-btn f2 5">P4</button>
+            <button class="option-btn flat5-btn f-sharp-2 6">b5</button>
+            <button class="option-btn perfect5-btn g2 7">P5</button>
+        </div>
+        <div class="option-btn-row">
+            <button class="option-btn minor6-btn g-sharp-2 8">m6</button>
+            <button class="option-btn major6-btn a2 9">M6</button>
+            <button class="option-btn minor7-btn a-sharp-2 10">m7</button>
+            <button class="option-btn major7-btn b2 11">M7</button>
+        </div>
 
+
+
+
+
+    </div>
 
     <audio id="c2" src="samples/c2.mp3"></audio>
     <audio id="c-sharp-2" src="samples/c-sharp-2.mp3"></audio>
@@ -59,4 +66,5 @@
     <audio id="b2" src="samples/b2.mp3"></audio>
     <audio id="c3" src="samples/c3.mp3"></audio>
 </body>
+
 </html>

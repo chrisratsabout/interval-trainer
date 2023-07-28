@@ -8,13 +8,30 @@ const rightNote = document.querySelector(".right-note");
 
 const optionBtns = document.querySelectorAll(".option-btn");
 
+const infoBtn = document.querySelector(".info-btn");
+const closeBtn = document.querySelector(".close-btn");
+const modal = document.querySelector(".modal");
+
 const secondNoteOptions = ['c2', 'c-sharp-2', 'd2', 'd-sharp-2', 'e2', 'f2', 'f-sharp-2', 'g2', 'g-sharp-2', 'a2', 'a-sharp-2', 'b2', 'c3'];
 
 let firstNote = 'c2';
 let secondNote = null;
 let score = 0;
 
-optionBtns.disabled = true;
+optionBtns.forEach(btn => {
+    btn.disabled = true;
+})
+
+infoBtn.addEventListener("click", () => {
+    modal.classList.toggle("active");
+})
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.toggle("active");
+})
+
+
+
 
 
 playBtn.addEventListener("click", function () {

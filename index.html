@@ -16,14 +16,43 @@
     <div class="container">
         <h2>Interval Trainer</h2>
         <div class="note-animation-container">
-            <div class="left-note"></div>
-            <div class="right-note"></div>
+            <div class="note-container">
+                <div class="left-note"></div>
+                <div class="right-note"></div>
+            </div>
+           <div class="button-container">
+            <button class="play-btn">Play <i class="fa-solid fa-play"></i></button>
+           </div>
+            
         </div>
         <div class="bottom-container">
-            <button class="play-btn">Play <i class="fa-solid fa-play"></i></button>
-            <div class="answer-status"><span class="fa-stack"><i class="fa-regular fa-thumbs-up correct"></i><span class="fa-stack fa-stack-1x"><i class="fa-regular fa-thumbs-down incorrect"></i></span></span></div>
-            <button class="score-box">Score: <span class="score-text">0</span></button>
+            <div class="note-container">
+                <div class="answer-status"><span class="fa-stack"><i class="fa-regular fa-thumbs-up correct"></i><span class="fa-stack fa-stack-1x"><i class="fa-regular fa-thumbs-down incorrect"></i></span></span></div>
+                <div><button class="info-btn"><i class="fa-solid fa-question"></i></button></div>
+            </div>
+            
+            <div class="score-container"><button class="score-box">Score: <span class="score-text">0</span></button></div>
         </div>
+     
+    </div>
+    <div class="modal">
+        <div class="close-btn"><i class="fa-solid fa-x"></i></div>
+        <h2>Interval Trainer</h2>
+        
+        <h3>Legend:</h3>
+        <div class="note-pill">P1/P8 | perfect unison/octave</div>
+        <div class="note-pill">m2 | minor 2nd</div>
+        <div class="note-pill">M2 | major 2nd</div>
+        <div class="note-pill">m3 | minor 3rd</div>
+        <div class="note-pill">M3 | major 3rd</div>
+        <div class="note-pill">P4 | perfect 4th</div>
+        <div class="note-pill">b5 | tritone/aug 4th/dim 5th</div>
+        <div class="note-pill">P5 | perfect 5th</div>
+        <div class="note-pill">m6 | minor 6th</div>
+        <div class="note-pill">M6 | major 6th</div>
+        <div class="note-pill">m7 | minor 7th</div>
+        <div class="note-pill">M7 | major 7th</div>
+       
     </div>
     <div class="option-container">
         <h2 class="option-title">Intervals:</h2>
@@ -45,12 +74,9 @@
             <button class="option-btn minor7-btn a-sharp-2 10">m7</button>
             <button class="option-btn major7-btn b2 11">M7</button>
         </div>
-
-
-
-
-
     </div>
+
+    
 
     <audio id="c2" src="samples/c2.mp3"></audio>
     <audio id="c-sharp-2" src="samples/c-sharp-2.mp3"></audio>

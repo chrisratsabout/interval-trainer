@@ -229,4 +229,8 @@ body {
     .modal {
         width: 77vw;
     }
+
+    .note-pill {
+        width: 66vw;
+    }
 }

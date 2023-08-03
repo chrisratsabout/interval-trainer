@@ -190,6 +190,14 @@ body {
     visibility: visible;
 }
 
+.correct {
+    color: #00be36;
+}
+
+.incorrect {
+    color: #be0000;
+}
+
 .note-pill {
     width: 280px;
     padding: 10px;

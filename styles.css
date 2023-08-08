@@ -22,7 +22,6 @@ body {
     width: 400px;
     border-radius: 10px;
     border: 8px solid #ececec;
-    margin: 10px auto;
     outline: none;
     box-shadow: -10px -10px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 15px 0 rgba(70, 70, 70, 0.12);
 }
@@ -30,10 +29,12 @@ body {
 .modal {
     background-color: #ececec;
     position: absolute;
-    top: 30px;
+    top: 0px;
     left: 50%;
+    height: 800px;
     transform: translateX(-50%);
     visibility: hidden;
+    
 
 }
 
@@ -73,7 +74,7 @@ body {
 .close-btn {
     position: relative;
     left: 90%;
-    top: 10%;
+    top: 0%;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -85,6 +86,12 @@ body {
 .info-btn:hover {
     font-size: 1.4rem;
     cursor: pointer;
+
+}
+
+.close-btn:hover {
+    color: #be0000;
+    transition: ease-in-out .3s;
 }
 
 .bottom-container {
